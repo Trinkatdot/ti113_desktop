@@ -1,30 +1,38 @@
 ﻿namespace Segundo_Programa
 {
-    using System;
-
-    class Program
+    internal class Program
     {
-        static void Main()
+        static void main(string[] args)
         {
-            // Solicita ao usuário um número de 1 a 7
-            Console.Write("Digite um número de 1 a 7: ");
-            int numero = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("informe um numero de 1 a 7 para exibir o Dia da semana");
+            string opcao = Console.ReadLine()!;
 
-            // Determina o dia da semana correspondente
-            string diaSemana = numero switch
-            {
-                1 => "Domingo",
-                2 => "Segunda-feira",
-                3 => "Terça-feira",
-                4 => "Quarta-feira",
-                5 => "Quinta-feira",
-                6 => "Sexta-feira",
-                7 => "Sábado",
-                _ => "Número inválido! Por favor, insira um número entre 1 e 7."
-            };
-
-            // Exibe o resultado
-            Console.WriteLine(diaSemana);
+            switch(opcao) {
+                case "1":
+                    Console.WriteLine("domingo");
+                    break;
+                     case "2":
+                    Console.WriteLine("Segunda-feira");
+                    break;
+                     case "3":
+                    Console.WriteLine("terça-feira");
+                    break;
+                     case "4":
+                    Console.WriteLine("quinta-feira");
+                    break;
+                     case "5":
+                    Console.WriteLine("quarta-feira");
+                    break;
+                     case "6":
+                    Console.WriteLine("sexta-feira");
+                    break;
+                     case "7":
+                    Console.WriteLine("sabado");
+                    break;
+                    default:
+                    Console.WriteLine("Dia Invalido");
+                    break;
+            }
         }
     }
 }
